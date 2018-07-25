@@ -1,0 +1,104 @@
+.range{
+		
+		@include desktop{
+			margin: 0 auto;
+			max-width: 90%;
+			padding-top: 80px;
+			
+		}
+		
+	h2{
+		font-size: 3em;
+		text-align: center;
+		padding:20px 20px 0 20px;
+		margin-bottom: 30px;
+
+		@include tablet{
+			margin-bottom: 30px;
+			font-size: 3.6em;
+			margin-top: 20px;
+		}
+
+		@include desktop{
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+	}
+
+	.div-range{
+
+		display: flex;
+		flex-direction: column;
+
+		@include desktop{
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.range-divided{
+
+			margin-bottom: 40px;
+
+
+			@include desktop{
+				box-sizing: border-box;
+				width: 32%;
+			}
+
+			.div-image{
+				img{
+					display: block;
+					margin:0 auto;
+
+					@include desktop{
+						box-sizing: border-box;
+						margin:0 0;
+						width: 100%;		
+					}
+				}
+
+			/* .img-last{
+				
+				@include desktop{
+					padding-left: 20px;
+				}
+			}
+			 */
+
+			}
+
+
+			h3{
+				font-size: 2.2em;
+				text-align: center;
+				padding: 0px 20px;
+				margin: 20px 0px;
+			}
+
+			p{
+				font-size: 1.7em;
+				text-align: center;
+				padding: 0px 20px;
+				margin: 0 auto;
+				width: 90%;
+   				 
+   				 @include tablet{
+					width: 360px;
+				}
+
+				 @include desktop{
+					width: 90%;
+   				 }
+			}
+		}
+
+		.range-divided-last{
+			margin-bottom: 0px;
+		}
+		
+	}  
+
+
+
+}

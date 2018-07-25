@@ -1,0 +1,99 @@
+.contact{
+
+	margin-bottom: 70px;
+
+	@include desktop{
+			margin: 0 auto;
+			max-width: 90%;
+			padding-top: 80px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	.div-contact{
+			padding-bottom: 20px;
+
+			@include desktop{
+				width: 50%;
+			}
+
+		h2{
+			font-size: 3.6em;
+			text-align: left;
+			padding: 20px;
+			border-bottom: solid red;
+
+			@include desktop{
+				display: inline-block;
+				padding: 0px;
+				padding-bottom: 30px;
+
+			}
+			@include tablet{
+				text-align: left;
+			}
+		}
+
+		ul {
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			li{
+				font-size: 1.8em;
+				padding: 0 20px;
+				
+				@include tablet{
+					text-align: left;
+				}
+
+				@include desktop{
+						padding: 0px;
+						text-align: left;	
+				}
+
+			}
+		}
+
+		p{
+
+			padding:0 20px;
+			font-size: 1.8em;
+			
+			@include tablet{
+				text-align: left;
+			}
+			@include desktop{
+				padding: 0px;
+				text-align: left;
+			}
+
+			a{
+				text-decoration: none;
+				font-weight: bold;
+				color: #000000;
+			}
+		}
+	}
+
+	.div-map{
+		width: 95%;
+		margin: 0 auto;
+
+			@include tablet{
+				width: 95%;
+				margin-left: 20px;
+			}
+
+			@include desktop{
+				margin-bottom: 70px;
+				width: 70%;
+				margin-left: 0px;
+				
+			}
+
+		iframe{
+			width: 100%;
+
+		}
+	}
+}
