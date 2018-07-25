@@ -7,33 +7,43 @@ $(document).ready(function  (){
 		var scroll = $(window).scrollTop();
 
 			if (scroll > 40 ) {
-					$(".nav-holder").addClass("point");
-				}else {
-					$(".nav-holder").removeClass("point")
-				}
-
-		});
-
-
-	$(window).scroll(function (){
-		var scrol = $(window).scrollTop();
-		var range = $(".range").offset();
-		console.log(range);
-		console.log(scrol);
-
-		if (scrol > range.top-100){
-			$("nav a").addClass("pasek");
-		}else {
-				$("nav a").removeClass("pasek");
-		}
-		
-
+				$(".nav-holder").addClass("point");
+			} else {
+				$(".nav-holder").removeClass("point")
+			}
 
 	});
 
 
+	var scrollTopPos = $(window).scrollTop();
+
+	$(window).on('scroll', function() {
+		scrollTopPos = $(window).scrollTop();
+		enableWatcher();
+	});
+
+	function enableWatcher() {
+		var prevActive = 0;
+		console.log(prevActive);
+
+		$('.section').each(function() {
+			var watchSectionNow = parseInt($(this).data('id'));
+			var sectionOffset = $(this).offset().top;
+			var bottomOffset = sectionOffset + $(this).height();
+			var hres = $("nav a").data('id');
+			var hre = $("nav a");
 
 
+			if (scrollTopPos > sectionOffset-100 
+				&& scrollTopPos < bottomOffset) {
+				if (prevActive !== watchSectionNow){
+					$('nav li a').removeClass('watcher')
+					$('nav li').eq(watchSectionNow - 1).find('a').addClass('watcher')
+				}
+
+			}
+		});
+	};
 		
 
 	$(".outbox a").on("click", function(e) {
