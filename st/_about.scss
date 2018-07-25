@@ -1,0 +1,67 @@
+.about{
+
+		@include desktop{
+			margin: 0 auto;
+			max-width: 90%;
+		}
+		
+	.about-company{
+		
+		h2{
+			font-size: 3em;
+			padding-bottom: 30px;
+			border-bottom: solid red;
+			text-align: left;
+			padding-left: 20px;
+			font-weight: bold;
+			padding-top: 40px;
+
+			@include desktop{
+				padding-left: 0px;
+				display: inline-block;
+				font-size: 3.6em;
+				text-align: left;
+			}
+
+			@include tablet{
+				text-align: left;
+			}
+
+		}
+
+		p{
+			margin-top: 25px;
+			font-size: 2em;
+			text-align: left;
+			padding: 0 20px;
+
+			@include tablet{
+				text-align: left;
+			}
+			@include desktop{
+				padding-left: 0px;
+				text-align: left;
+			}
+		}
+		ul{
+			margin-top: 20px;
+
+			li{
+				padding:10px 20px;
+				font-size: 1.8em;
+				font-weight: bold;
+
+				@include tablet{
+					text-align: left;
+			}
+
+			@include desktop{
+					padding-left: 0px;
+					text-align: left;
+				}
+			}
+		}
+	}	
+
+
+}

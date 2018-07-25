@@ -1,0 +1,23 @@
+body{
+	background-color:#fff;
+	background:#f0ece5 url("../img/pattern-paper.png");
+	overflow-x:hidden;
+	position: relative;
+	font-family:'Helvetica Neue', Arial, sans-serif;
+
+	
+
+}
+
+html{
+	font-size: 10px;
+	font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+		@include tablet{
+			margin: 0 auto;
+			max-width: 1200px;
+			padding: 0 20px;
+			}
+		}

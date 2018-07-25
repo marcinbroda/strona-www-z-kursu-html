@@ -1,0 +1,400 @@
+.wrapper{
+
+	@include tablet{
+		max-width: 90%;
+	    margin: 0 auto;
+	}
+		
+	.container-header{
+			position: relative;
+			background: #000 url("../img/hero-image.jpg");
+    		height: auto;
+    		width: auto;
+    		background-size: cover;
+    		background-position: center;
+
+    		@include tablet{
+    			height: 420px;
+    		}
+
+			.nav-holder{
+				background-color: rgba(0, 0, 0, 0.5);
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 20px;
+
+				@include tablet{
+					position: fixed;
+					z-index: 999;
+					background-color: rgba(0, 0, 0, 0);
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					top: 40px;
+					margin-left: -82px;
+					height: 68px;
+    				width: 90%;
+    				padding: 0px 82px;
+    				transition: 0.3s linear;
+					
+				}
+
+				.outbox{
+					background-color: rgba(0, 0, 0, 0.76);
+					padding-bottom: 5px;
+					position: fixed;
+					width: 100%;
+					z-index: 99;
+					
+
+					@include tablet{
+						position: relative;
+						margin: 0px;
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						width: 70%;
+						background-color: #fff;
+						margin-left: -84px;
+						padding-left: 84px;
+						background-color: none;
+						padding-bottom: 0px;
+				
+					}
+				
+
+					.title{
+
+						h2{
+							font-size: 4.5em;
+							color: #fff;
+							padding-left: 10px;
+							font-weight: bold;
+							text-align: center;
+							padding-bottom: 5px;
+							padding-top: 5px;
+
+							a{
+								text-decoration: none;
+								color: #fff;
+
+								@include tablet{
+									color: black;
+
+								}
+							}
+
+							@include tablet{
+								padding-top: 0px;
+								color: black;
+								padding-left: 0px;
+								line-height: 68px;
+								padding-bottom: 0px;
+								font-size: 4.1em;
+							}
+
+						}
+
+
+					}
+
+					.nav{
+						margin-top: 10px;
+						margin-left: 5px;
+						text-align: center;
+						display: none;		
+
+						@include tablet{
+							margin: 0px;
+							padding-right: 32px;
+							display: block;	
+						}
+
+						@include desktop{
+							padding-right: 82px;
+						}
+
+						ul{
+							display: flex;
+							flex-direction: column;
+
+							@include tablet{
+								display: flex;
+								flex-direction: row;
+								margin-top: 4px;
+							}
+
+							li{
+								padding:20px;
+								display: inline-block;
+					
+								@include tablet{
+									padding: 0;
+									padding-bottom: 1px;
+									margin-right: 20px;				
+									
+								}
+
+								@include desktop{
+									margin-right: 20px;
+								}
+
+								a{
+									position:relative;
+									line-height: 0px;
+									font-weight: bold;
+									color: #fff;
+									cursor: pointer;
+									font-size: 2.3em;
+									font-weight: bold;
+									text-decoration: none;
+
+
+									@include tablet{
+										display: inline-block;
+										height: 60px;
+										font-size: 1.7em;
+										line-height: 60px;
+										color: #000000;
+									}		
+										
+									@include desktop{
+										font-size: 2em;
+									}
+
+								}
+
+								a.pasek::before{
+									transition: 0.3s ease;
+									width: 100%;
+								}
+				
+
+								a::before{
+								    content: "";
+								    position: absolute;
+								    bottom: -5px;
+								    left: 0;
+								    height: 4px;
+								    width: 0%;
+								    margin: 0 auto;
+								    left: 0;
+								    transition: 0.3s ease;
+								    background: #e40b0b;
+										
+								}
+
+								a:hover {
+
+									&:before{
+										width: 100%;
+									}
+								}	
+							}
+						}
+					}
+
+				
+
+				.active{
+						display: block;
+					}
+				}
+				
+				.call-me{
+
+					margin-top: 30px;
+					color: #fff;
+					font-size: 1.9em;
+					position: relative;
+					padding-left: 20px;
+					padding-top: 70px;
+
+					@include tablet{
+						font-size: 1.7em;
+						margin: 0px;
+						background-color: black;
+						width: 30%;
+						padding-right: 82px;
+						margin-right: -82px;
+						padding-top: 0px;
+					}
+
+					@include desktop{
+						font-size: 1.9em;
+					}
+
+					a{
+						color:#12ff06;
+						font-weight: bold;
+						text-decoration: none;
+						
+						@include tablet{
+							display: block;
+							text-align: right;
+							position: relative;
+							padding-right: 60px;
+							margin-top: 10px;					
+						}
+
+						.number{
+							font-size: 1.2em;
+							margin-top: -25px;
+							display: inline-block;
+
+							@include desktop{
+								font-size: 1.3em;
+							}
+						}
+
+						.fa-phone{
+							font-size: 2.3em;
+							position: absolute;
+							font-weight: bold;
+							top: 75px;
+							left: 163px;
+							color: #12ff06;
+
+							@include tablet{
+								font-size: 2.5em;
+								top: 0;
+								right: 0;
+							}
+							@include desktop{
+								font-size: 3em;
+							}
+						}
+					}
+				}
+			}
+
+			.point{
+				top: 0;
+				transition: 0.3s linear;
+			}
+			/*.pasek{
+					display: none;
+				}*/
+
+				
+
+			.text-about{
+				padding-left: 20px;
+				padding-top: 20px;
+
+				@include tablet{
+					position: absolute;
+					bottom: 40px;
+					padding-left: 80px;
+				}
+
+				h1{
+					font-size: 2.7em;
+					color: #fff;
+					padding-bottom: 10px;
+
+					@include tablet{
+						font-size: 5.5em;
+					}
+					include desktop{
+						font-size: 6em;
+					}
+				}
+
+				p{
+					font-size: 2em;
+					color: #fff;
+					padding-bottom: 20px;
+
+					@include tablet{
+						font-size: 2.7em;
+						text-align: center;
+					}
+				}
+			}
+
+			.div-button{
+					position: fixed;
+					top: 13px;
+					right: 20px;
+					z-index: 999;
+
+					@include tablet{
+						display: none;
+					}
+
+
+				
+				.button{
+					position: relative;
+					width: 40px;
+					height: 35px;
+					border-top: 5px solid #ffffff;
+					transition: 0.2s transform linear;
+					background-color: transparent;
+					border-right: 0px;
+					border-left: 0px;
+					outline: none;
+					border-bottom: 0px;
+						
+				}
+
+				.button:before, .button:after{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					border-top: 5px solid #ffffff;
+					transform: translateY(10px);
+					outline: none;
+				}
+
+				.button::after{
+					transform: translateY(25px);
+					transition: 0.2s transform linear;
+					
+				}
+
+				 .button-active{
+					transform: rotate(45deg) translateY(5px);
+					border: none;
+					outline: none;
+				}
+				 
+				.button.button-after:after{
+					transform: rotate(-90deg) translateX(-10px);
+
+				}
+
+			}
+
+				
+
+			/*.button{
+				display: inline-block;
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				z-index: 999;
+
+				@include tablet{
+					display: none;
+				}
+
+				.fa-bars{
+				    font-size: 4.1rem;
+					color: #fff;
+					 margin: 5px 20px;
+					 cursor: pointer;
+					}
+			
+			}
+*/
+
+
+	}
+
+
+}
